@@ -1,2 +1,5 @@
 import { parseUserName } from "./utils/parseUserName.js";
-parseUserName();
+
+export const app = () => {
+  parseUserName();
+};
