@@ -4,13 +4,16 @@ import {
   goodbyeUser,
   showDir,
 } from "./utils/index.js";
+import os from "os";
 
 export const app = () => {
   const userName = parseUserName();
   greetUser(userName);
-  showDir();
-  const readConsole = process.stdin;
 
+  process.chdir(os.homedir());
+  showDir();
+
+  const readConsole = process.stdin;
   readConsole.on("data", (chunk) => {
     const command = chunk.toString().trim();
 
@@ -18,7 +21,6 @@ export const app = () => {
       goodbyeUser(userName);
     }
   });
-
   process.on("SIGINT", () => {
     goodbyeUser(userName);
   });
