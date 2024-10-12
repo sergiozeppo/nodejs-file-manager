@@ -1,2 +1,2 @@
-import { parseUserName } from "./argv/argv.js";
+import { parseUserName } from "./utils/parseUserName.js";
 parseUserName();
