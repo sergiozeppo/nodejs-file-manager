@@ -9,6 +9,17 @@ export const app = () => {
   const userName = parseUserName();
   greetUser(userName);
   showDir();
+  const readConsole = process.stdin;
 
-  goodbyeUser(userName);
+  readConsole.on("data", (chunk) => {
+    const command = chunk.toString().trim();
+
+    if (command === ".exit") {
+      goodbyeUser(userName);
+    }
+  });
+
+  process.on("SIGINT", () => {
+    goodbyeUser(userName);
+  });
 };
