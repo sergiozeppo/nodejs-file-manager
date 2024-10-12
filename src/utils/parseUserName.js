@@ -7,6 +7,5 @@ export const parseUserName = () => {
   else if (args[0].includes("username")) {
     userName = args[0].slice(args[0].indexOf("=") + 1);
   } else userName = "Guest";
-
-  console.log(`Welcome to the File Manager, ${userName}!`);
+  return userName;
 };
