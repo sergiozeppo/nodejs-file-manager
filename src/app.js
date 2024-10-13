@@ -5,6 +5,7 @@ import {
   showDir,
 } from "./utils/index.js";
 import os from "os";
+import { taskHandler } from "./taskHandler.js";
 
 export const app = () => {
   const userName = parseUserName();
@@ -20,6 +21,7 @@ export const app = () => {
     if (command === ".exit") {
       goodbyeUser(userName);
     }
+    taskHandler(command);
   });
   process.on("SIGINT", () => {
     goodbyeUser(userName);
