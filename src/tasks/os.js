@@ -6,6 +6,7 @@ export const os = (parameter) => {
       case "--EOL":
         console.log(coloringItem("yellow", JSON.stringify(osModule.EOL)));
         break;
+
       case "--cpus":
         osModule.cpus().forEach(({ model, speed }, idx) => {
           console.log(`CPU: ${coloringItem("yellow", `${idx + 1}`)}`);
@@ -15,6 +16,10 @@ export const os = (parameter) => {
         console.log(
           `Total CPUs: ${coloringItem("yellow", `${osModule.cpus().length}`)}`
         );
+        break;
+
+      case "--homedir":
+        console.log(coloringItem("yellow", osModule.homedir()));
         break;
 
       default:
