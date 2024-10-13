@@ -22,6 +22,10 @@ export const os = (parameter) => {
         console.log(coloringItem("yellow", osModule.homedir()));
         break;
 
+      case "--username":
+        console.log(coloringItem("yellow", osModule.userInfo().username));
+        break;
+
       default:
         console.log(`\n${coloringItem("red", "Invalid input")}`);
     }
