@@ -1,4 +1,5 @@
 import { coloringItem } from "../utils/coloringItem.js";
+import { divisor } from "../constants/constants.js";
 
 export const os = (parameter) => {
   import("node:os").then((osModule) => {
@@ -9,9 +10,10 @@ export const os = (parameter) => {
 
       case "--cpus":
         osModule.cpus().forEach(({ model, speed }, idx) => {
+          const ghz = (speed / divisor).toFixed(1);
           console.log(`CPU: ${coloringItem("yellow", `${idx + 1}`)}`);
           console.log(`Model: ${coloringItem("yellow", `${model}`)}`);
-          console.log(`Speed: ${coloringItem("yellow", `${speed}\n`)}`);
+          console.log(`Speed: ${coloringItem("yellow", `${ghz} Ghz\n`)}`);
         });
         console.log(
           `Total CPUs: ${coloringItem("yellow", `${osModule.cpus().length}`)}`
@@ -24,6 +26,10 @@ export const os = (parameter) => {
 
       case "--username":
         console.log(coloringItem("yellow", osModule.userInfo().username));
+        break;
+
+      case "--architecture":
+        console.log(coloringItem("yellow", osModule.arch()));
         break;
 
       default:
