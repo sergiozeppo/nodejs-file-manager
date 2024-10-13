@@ -6,6 +6,16 @@ export const os = (parameter) => {
       case "--EOL":
         console.log(coloringItem("yellow", JSON.stringify(osModule.EOL)));
         break;
+      case "--cpus":
+        osModule.cpus().forEach(({ model, speed }, idx) => {
+          console.log(`CPU: ${coloringItem("yellow", `${idx + 1}`)}`);
+          console.log(`Model: ${coloringItem("yellow", `${model}`)}`);
+          console.log(`Speed: ${coloringItem("yellow", `${speed}\n`)}`);
+        });
+        console.log(
+          `Total CPUs: ${coloringItem("yellow", `${osModule.cpus().length}`)}`
+        );
+        break;
 
       default:
         console.log(`\n${coloringItem("red", "Invalid input")}`);
