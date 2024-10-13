@@ -8,13 +8,13 @@ export const taskHandler = async (chunk) => {
 
   try {
     if (!commands.includes(command)) {
-      console.log(`\n${coloringItem("red", "Invalid input")}`);
+      console.log(`${coloringItem("red", "Invalid input")}`);
       return;
     }
 
     await tasks[command](...args);
   } catch {
-    console.log(`\n${coloringItem("red", "Operation failed")}\n`);
+    console.log(`${coloringItem("red", "Operation failed")}`);
   } finally {
     showDir();
   }

@@ -33,7 +33,7 @@ export const os = (parameter) => {
         break;
 
       default:
-        console.log(`\n${coloringItem("red", "Invalid input")}`);
+        console.log(`${coloringItem("red", "Invalid input")}`);
     }
   });
 };

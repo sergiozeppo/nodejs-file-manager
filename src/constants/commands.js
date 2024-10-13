@@ -1,1 +1,1 @@
-export const commands = ["os", "up"];
+export const commands = ["cd", "os", "up"];
