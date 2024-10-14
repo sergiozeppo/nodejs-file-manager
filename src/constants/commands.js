@@ -7,6 +7,7 @@ export const commands = [
   "ls",
   "mv",
   "os",
+  "rm",
   "rn",
   "up",
 ];

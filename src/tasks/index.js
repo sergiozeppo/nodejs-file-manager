@@ -6,5 +6,6 @@ export * from "./hash.js";
 export * from "./ls.js";
 export * from "./mv.js";
 export * from "./os.js";
+export * from "./rm.js";
 export * from "./rn.js";
 export * from "./up.js";
