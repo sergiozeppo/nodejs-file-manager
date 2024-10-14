@@ -4,7 +4,7 @@ import { newFileContent } from "../constants/constants.js";
 
 export const add = async (fileName) => {
   try {
-    const p = resolve(fileName);
+    const p = resolve(fileName.trim());
 
     await writeFile(p, newFileContent, { flag: "wx+" });
   } catch {

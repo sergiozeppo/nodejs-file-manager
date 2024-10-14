@@ -4,7 +4,7 @@ import { stdout } from "process";
 import { coloringItem } from "../utils/coloringItem.js";
 
 export const cat = (fileName) => {
-  const p = resolve(fileName);
+  const p = resolve(fileName.trim());
   const rs = createReadStream(p);
 
   rs.pipe(stdout);

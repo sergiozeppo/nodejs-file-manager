@@ -4,8 +4,8 @@ import { createReadStream, createWriteStream } from "node:fs";
 import { coloringItem } from "../utils/coloringItem.js";
 
 export const cp = async (srcFile, dstPath) => {
-  const srcFP = resolve(srcFile);
-  const dstP = resolve(dstPath, srcFile);
+  const srcFP = resolve(srcFile.trim());
+  const dstP = resolve(dstPath.trim(), srcFile.trim());
 
   try {
     await access(srcFP);

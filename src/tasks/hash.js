@@ -5,7 +5,7 @@ import { coloringItem } from "../utils/coloringItem.js";
 import { access } from "node:fs/promises";
 
 export const hash = async (pathToFile) => {
-  const path = resolve(pathToFile);
+  const path = resolve(pathToFile.trim());
 
   try {
     await access(path);
