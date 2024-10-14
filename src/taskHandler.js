@@ -4,7 +4,14 @@ import { showDir } from "./utils/showDir.js";
 import { commands } from "./constants/commands.js";
 
 export const taskHandler = async (chunk) => {
-  const [command, ...args] = chunk.split(" ");
+  const regex = /[^\s'"]+|'([^']*)'|"([^"]*)"/g;
+  const args = [];
+  let match;
+
+  while ((match = regex.exec(chunk)) !== null) {
+    args.push(match[1] || match[2] || match[0]);
+  }
+  const [command, ...params] = args;
 
   try {
     if (!commands.includes(command)) {
@@ -12,7 +19,7 @@ export const taskHandler = async (chunk) => {
       return;
     }
 
-    await tasks[command](...args);
+    await tasks[command](...params);
   } catch {
     console.log(`${coloringItem("red", "Operation failed")}`);
   } finally {
