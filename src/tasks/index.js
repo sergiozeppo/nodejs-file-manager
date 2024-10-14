@@ -4,6 +4,7 @@ export * from "./cd.js";
 export * from "./cp.js";
 export * from "./hash.js";
 export * from "./ls.js";
+export * from "./mv.js";
 export * from "./os.js";
 export * from "./rn.js";
 export * from "./up.js";
