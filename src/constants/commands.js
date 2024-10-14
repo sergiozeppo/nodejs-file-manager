@@ -4,6 +4,7 @@ export const commands = [
   "cd",
   "compress",
   "cp",
+  "decompress",
   "hash",
   "ls",
   "mv",
