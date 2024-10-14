@@ -2,6 +2,7 @@ export const commands = [
   "add",
   "cat",
   "cd",
+  "compress",
   "cp",
   "hash",
   "ls",

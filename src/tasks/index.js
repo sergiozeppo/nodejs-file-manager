@@ -1,6 +1,7 @@
 export * from "./add.js";
 export * from "./cat.js";
 export * from "./cd.js";
+export * from "./compress.js";
 export * from "./cp.js";
 export * from "./hash.js";
 export * from "./ls.js";
