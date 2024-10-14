@@ -1,1 +1,1 @@
-export const commands = ["cd", "hash", "ls", "os", "up"];
+export const commands = ["cat", "cd", "hash", "ls", "os", "up"];
