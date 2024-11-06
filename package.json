@@ -1,0 +1,27 @@
+{
+    "name": "nodejs-file-manager",
+    "version": "1.0.0",
+    "description": "File Manager implemented using Node.js APIs",
+    "engines": {
+      "node": ">=22.9.0"
+    },
+    "type": "module",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/sergiozeppo/nodejs-file-manager.git"
+    },
+    "keywords": [
+      "nodejs",
+      "file-manager",
+      "sergiozeppo"
+    ],
+    "author": "sergiozeppo",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/sergiozeppo/nodejs-file-manager/issues"
+    },
+    "homepage": "https://github.com/sergiozeppo/nodejs-file-manager#readme"
+  }
